@@ -10,7 +10,7 @@ print("## Frozen Lake ##")
 action2string = {0: "Left", 1: "Down", 2: "Right", 3: "Up"}
 reward = 0
 counter = 0
-path = [(0,1), (4, 1), (8, 1), (9, 2), (8, 0), (4, 3), (0, 3), (0, 0), (4, 1), (8, 1), (9, 2), (10, 2), (14, 1), (14, 1), (15, 2)]
+path = [(0, 1), (4, 1), (8, 2), (9, 0), (8, 3), (4, 3), (0, 0), (0, 1), (4, 1), (8, 2), (9, 2), (10, 1), (14, 1), (14, 2)]
 episode_done = False
 state = env.reset(seed=0)
 
@@ -29,4 +29,4 @@ print("Counter: {}".format(counter))
 #Counter: 170
 #print("Successful path: {}".format(successful_path))
 # von Hand hinzugefügt von Start nach unten zu gehen)
-#Successful path: [(0,1), (4, 1), (8, 1), (9, 2), (8, 0), (4, 3), (0, 3), (0, 0), (4, 1), (8, 1), (9, 2), (10, 2), (14, 1), (14, 1), (15, 2)]
+#Successful path: [(0, 1), (4, 1), (8, 2), (9, 0), (8, 3), (4, 3), (0, 0), (0, 1), (4, 1), (8, 2), (9, 2), (10, 1), (14, 1), (14, 2)]
