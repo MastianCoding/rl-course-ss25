@@ -19,16 +19,17 @@ while reward <1:
     print(env.render())
     path = []
     counter += 1
+    state = 0
     while not episode_done:
         action = random.randint(0, 3)  # choose a random action
+        path.append((state, action))
         state, reward, episode_done, _, _ = env.step(action)
         print(f"\nAction:{action2string[action]}, new state:{state}, reward:{reward}")
         print(env.render())
-        path.append((state, action))
         if reward > 0:
             successful_path = path
 
 print("Counter: {}".format(counter))
 #Counter: 170
 print("Successful path: {}".format(successful_path))
-#Successful path: [(4, 1), (8, 1), (9, 2), (8, 0), (4, 3), (0, 3), (0, 0), (4, 1), (8, 1), (9, 2), (10, 2), (14, 1), (14, 1), (15, 2)]
+#Successful path: [(0, 1), (4, 1), (8, 2), (9, 0), (8, 3), (4, 3), (0, 0), (0, 1), (4, 1), (8, 2), (9, 2), (10, 1), (14, 1), (14, 2)]
